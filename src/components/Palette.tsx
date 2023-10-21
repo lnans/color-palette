@@ -25,7 +25,7 @@ function Palette({ colors }: PaletteProps) {
           <span>l: {(color[2] * 100).toFixed(0)}%</span>
           <div className="flex-1"></div>
           <span class="text-xs font-semibold uppercase">{colors[index]}</span>
-          <span>L{index}</span>
+          <span>L{index + 1}</span>
         </div>
       ))}
     </div>

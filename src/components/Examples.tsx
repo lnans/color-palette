@@ -13,10 +13,10 @@ function Examples({ colors }: ExamplesProps) {
   const filled = {
     '--color-bg': colors[4],
     '--color-bd': colors[4],
-    '--color': colors[12],
+    '--color': 'white',
     '--color-hover-bg': colors[3],
     '--color-hover-bd': colors[3],
-    '--color-hover': colors[12],
+    '--color-hover': 'white',
   } as CSSProperties
 
   const outlined = {
