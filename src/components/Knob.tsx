@@ -8,7 +8,7 @@ type KnobProps = {
 }
 
 function Knob({ onColorChange }: KnobProps) {
-  const [color, setColor] = useState<string>('#000000')
+  const [color, setColor] = useState<string>('#3a4098')
   const [satVariation, setSatVariation] = useState<number>(0)
 
   const handleOnChangeColorInput = (e: TargetedEvent<HTMLInputElement, Event>) => {
