@@ -4,7 +4,7 @@ import { useEffect, useState } from 'preact/hooks'
 import { ComputeColor } from '../utils/colors'
 
 type KnobProps = {
-  onColorChange?: (colors: string[]) => void
+  onColorChange?: (colors: string[], satVariation: number) => void
 }
 
 function Knob({ onColorChange }: KnobProps) {
@@ -20,7 +20,7 @@ function Knob({ onColorChange }: KnobProps) {
   }
 
   useEffect(() => {
-    onColorChange?.(ComputeColor(color, satVariation))
+    onColorChange?.(ComputeColor(color, satVariation), satVariation)
   }, [color, satVariation])
 
   return (
