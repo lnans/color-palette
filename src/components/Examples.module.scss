@@ -1,0 +1,36 @@
+.root {
+  background-color: var(--color-bg);
+  border-color: var(--color-bd);
+  color: var(--color);
+
+  &:hover {
+    background-color: var(--color-hover-bg);
+    border-color: var(--color-hover-bd);
+    color: var(--color-hover);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

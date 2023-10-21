@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 10
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "preact": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["dist", "node_modules"],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+
+    "@typescript-eslint/no-unused-vars": ["error"],
+
+    "@typescript-eslint/explicit-function-return-type": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/no-explicit-any": ["error"],
+
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+  }
+}

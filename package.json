@@ -1,0 +1,38 @@
+{
+  "name": "color-palette",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"**/*.{ts,tsx}\" --quiet",
+    "check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "validate": "yarn format && yarn lint && yarn check"
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2",
+    "classnames": "^2.3.2",
+    "preact": "^10.18.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.6.0",
+    "@types/chroma-js": "^2.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.52.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "packageManager": "yarn@3.6.4"
+}

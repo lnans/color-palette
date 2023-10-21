@@ -1,0 +1,6 @@
+.color {
+  color: black;
+  &:nth-child(-n + 6) {
+    color: white;
+  }
+}
