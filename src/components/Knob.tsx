@@ -20,7 +20,7 @@ function Knob({ onColorChange }: KnobProps) {
   }
 
   useEffect(() => {
-    onColorChange?.(ComputeColor(color, satVariation), satVariation)
+    onColorChange?.(ComputeColor(color), satVariation)
   }, [color, satVariation])
 
   return (

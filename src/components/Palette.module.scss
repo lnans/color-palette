@@ -1,6 +1,10 @@
 .color {
-  color: black;
+  color: white;
   &:nth-child(-n + 6) {
-    color: white;
+    color: black;
+  }
+  &:nth-child(6) {
+    margin-inline: 0.25rem;
+    border-radius: 6px;
   }
 }

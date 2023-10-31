@@ -11,30 +11,30 @@ function Examples({ colors }: ExamplesProps) {
   const [scale, setScale] = useState<number>(1)
 
   const filled = {
-    '--color-bg': colors[3],
-    '--color-bd': colors[3],
+    '--color-bg': colors[5],
+    '--color-bd': colors[5],
     '--color': 'white',
-    '--color-hover-bg': colors[2],
-    '--color-hover-bd': colors[2],
+    '--color-hover-bg': colors[6],
+    '--color-hover-bd': colors[6],
     '--color-hover': 'white',
   } as CSSProperties
 
   const outlined = {
     '--color-bg': 'transparent',
-    '--color-bd': colors[3],
-    '--color': colors[3],
-    '--color-hover-bg': colors[9],
-    '--color-hover-bd': colors[2],
-    '--color-hover': colors[2],
+    '--color-bd': colors[6],
+    '--color': colors[6],
+    '--color-hover-bg': colors[1],
+    '--color-hover-bd': colors[7],
+    '--color-hover': colors[7],
   } as CSSProperties
 
   const ghost = {
     '--color-bg': 'transparent',
     '--color-bd': 'transparent',
-    '--color': colors[3],
-    '--color-hover-bg': colors[9],
-    '--color-hover-bd': colors[9],
-    '--color-hover': colors[2],
+    '--color': colors[6],
+    '--color-hover-bg': colors[1],
+    '--color-hover-bd': colors[1],
+    '--color-hover': colors[7],
   } as CSSProperties
 
   return (

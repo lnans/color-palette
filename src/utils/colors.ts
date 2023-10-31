@@ -3,26 +3,8 @@ import chroma from 'chroma-js'
 // const lightnessMap = [0.18, 0.28, 0.38, 0.48, 0.57, 0.68, 0.79, 0.87, 0.95, 0.98, 0.99]
 // const saturationMap = [1, 0.58, 0.43, 0.34, 0.4, 0.55, 0.87, 1, 1, 1, 1]
 
-const lightnessMap = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.97]
-const saturationMap = [1, 0.58, 0.5, 0.44, 0.39, 0.57, 0.77, 0.88, 0.95, 1]
-
-export function ComputeColor(color: string, satVariation: number): string[] {
-  generate(color)
-
-  const chromaColor = chroma(color)
-
-  const result: string[] = []
-
-  lightnessMap.forEach((lightness, index) => {
-    const colorHsl = chromaColor.hsl()
-    colorHsl[1] = saturationMap[index] + satVariation
-    colorHsl[2] = lightness
-
-    const colorHex = chroma(colorHsl, 'hsl').hex()
-    result.push(colorHex)
-  })
-
-  return result
+export function ComputeColor(color: string): string[] {
+  return generate(color)
 }
 
 // https://github.com/javisperez/tailwindcolorshades/blob/master/src/composables/colors.ts
@@ -90,5 +72,5 @@ function generate(color: string) {
     result[level] = darken(color, intensityMap[level])
   })
 
-  console.log('res', result)
+  return Object.values(result)
 }
